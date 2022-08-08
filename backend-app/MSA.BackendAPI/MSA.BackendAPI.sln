@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.BackendAPI", "MSA.BackendAPI\MSA.BackendAPI.csproj", "{64FEC875-B77C-47B3-ADFD-1B09E7DD298F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSA.BackendAPI.Test", "MSA.BackendAPI.Test\MSA.BackendAPI.Test.csproj", "{0873A8A9-5085-46CD-8D44-E5F882D336B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64FEC875-B77C-47B3-ADFD-1B09E7DD298F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FEC875-B77C-47B3-ADFD-1B09E7DD298F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FEC875-B77C-47B3-ADFD-1B09E7DD298F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FEC875-B77C-47B3-ADFD-1B09E7DD298F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0873A8A9-5085-46CD-8D44-E5F882D336B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0873A8A9-5085-46CD-8D44-E5F882D336B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0873A8A9-5085-46CD-8D44-E5F882D336B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0873A8A9-5085-46CD-8D44-E5F882D336B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAC37E04-3C06-4122-9755-0D08E4EC5E94}
+	EndGlobalSection
+EndGlobal

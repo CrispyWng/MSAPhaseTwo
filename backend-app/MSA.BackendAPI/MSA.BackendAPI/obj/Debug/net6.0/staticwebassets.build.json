@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nkEfUR88W0Sw23v03Wqq7BFObMs4/IR0/1MFOfQxoOk=",
+  "Source": "MSA.BackendAPI",
+  "BasePath": "_content/MSA.BackendAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
