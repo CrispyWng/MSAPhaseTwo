@@ -26,17 +26,16 @@ namespace MSA.BackendAPI.Controllers
         [HttpGet]
         [Route("cheaper")]
         [ProducesResponseType(200)]
-        public async Task<IActionResult> GetRawRedditHotPosts([FromQuery(Name = "searchTerm")] string searchTerm)
+        public async Task<IActionResult> GetAverageCheapestPrice([FromQuery(Name = "searchTerm")] string searchTerm)
         {
             var res = await _client.GetAsync("games?title="+searchTerm+"&limit=50&exact=0");
             var content = await res.Content.ReadAsAsync<List<SteamGame>>();
             var sumPrice = content.Aggregate(0.0, (acc, x) => acc + Double.Parse(x.Cheapest));
 
-
             var result = new PriceResult()
             {
                 NumResults = content.Count,
-                AverageCheapestPrice = sumPrice / content.Count
+                AverageCheapestPrice = Math.Round(sumPrice / content.Count, 2)
             };
 
             return Ok(result);
