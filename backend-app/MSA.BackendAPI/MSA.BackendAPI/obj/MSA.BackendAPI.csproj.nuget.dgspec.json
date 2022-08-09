@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {}
+    "C:\\MSA-Phase-2\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
+    "C:\\MSA-Phase-2\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+        "projectUniqueName": "C:\\MSA-Phase-2\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
         "projectName": "MSA.BackendAPI",
-        "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
-        "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
+        "projectPath": "C:\\MSA-Phase-2\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+        "packagesPath": "C:\\Users\\Chris Wong\\.nuget\\packages\\",
+        "outputPath": "C:\\MSA-Phase-2\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Frank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chris Wong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

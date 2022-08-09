@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MSA.BackendAPI.Test
-build_property.ProjectDir = C:\Repos\MSAPhaseTwo\backend-app\MSA.BackendAPI\MSA.BackendAPI.Test\
+build_property.ProjectDir = C:\MSA-Phase-2\MSAPhaseTwo\backend-app\MSA.BackendAPI\MSA.BackendAPI.Test\
