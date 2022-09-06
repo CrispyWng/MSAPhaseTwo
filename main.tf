@@ -58,9 +58,9 @@ resource "azurerm_linux_web_app" "msa-webapp" {
   resource_group_name = "resource-msa"
   service_plan_id     = azurerm_service_plan.appserviceplan.id
   https_only          = true
-  always_on = false
 
   site_config {
     minimum_tls_version = "1.2"
+    always_on = false
   }
 }
