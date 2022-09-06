@@ -52,12 +52,14 @@ resource "azurerm_service_plan" "appserviceplan" {
 }
 
 # Create the web app, pass in the App Service Plan ID
-resource "azurerm_linux_web_app" "webapp" {
+resource "azurerm_linux_web_app" "msa-webapp" {
   name                = "webapp-msa-crispy-wings"
   location            = "eastus"
   resource_group_name = "resource-msa"
   service_plan_id     = azurerm_service_plan.appserviceplan.id
   https_only          = true
+  use_32_bit_worker_process = true
+  
   site_config {
     minimum_tls_version = "1.2"
   }
