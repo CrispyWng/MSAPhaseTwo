@@ -27,7 +27,7 @@ resource "random_integer" "ri" {
 
 # Create the resource group
 resource "azurerm_resource_group" "rg" {
-  name     = "msaResource"
+  name     = "resource-msa"
   location = "eastus"
 }
 
