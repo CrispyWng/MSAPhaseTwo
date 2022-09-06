@@ -13,6 +13,10 @@ terraform {
     storage_account_name = "terraformstate23"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
+    subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
+    tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
+    client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
+    client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
   }
 }
 
