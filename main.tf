@@ -10,13 +10,17 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "resource-msa"
-    storage_account_name = "terraformstate23"
+    storage_account_name = "terraformstate235"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
-    subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
-    tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
-    client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
-    client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
+    # subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
+    # tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
+    # client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
+    # client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
+    subscription_id = "963666b0-eab5-411a-8b3a-b5dc5d4be6e5"
+    tenant_id       = "d1b36e95-0d50-42e9-958f-b63fa906beaa"
+    client_id       = "ad61c79f-200d-4821-8327-a2b811d5d041"
+    client_secret   = "X~D8Q~mmcz-hYA3iWzKq-qybs.RdZnDV40mebdhx"
   }
 }
 
@@ -24,10 +28,14 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
-  tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
-  client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
-  client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
+  subscription_id = "963666b0-eab5-411a-8b3a-b5dc5d4be6e5"
+  tenant_id       = "d1b36e95-0d50-42e9-958f-b63fa906beaa"
+  client_id       = "ad61c79f-200d-4821-8327-a2b811d5d041"
+  client_secret   = "X~D8Q~mmcz-hYA3iWzKq-qybs.RdZnDV40mebdhx"
+  # subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
+  # tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
+  # client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
+  # client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
 }
 
 # Generate a random integer to create a globally unique name
