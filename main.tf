@@ -51,24 +51,10 @@ resource "random_integer" "ri" {
 # }
 
 # Create the Linux App Service Plan
-resource "azurerm_service_plan" "appserviceplan" {
-  name                = "webapp-asp-msa"
-  location            = "eastus"
+resource "azurerm_container_registry" "acr" {
+  name                = "crispyregistry"
   resource_group_name = "resource-msa"
-  os_type             = "Linux"
-  sku_name            = "F1"
-}
-
-# Create the web app, pass in the App Service Plan ID
-resource "azurerm_linux_web_app" "msa-webapp" {
-  name                = "webapp-msa-crispy-wings"
   location            = "eastus"
-  resource_group_name = "resource-msa"
-  service_plan_id     = azurerm_service_plan.appserviceplan.id
-  https_only          = true
-
-  site_config {
-    minimum_tls_version = "1.2"
-    always_on = false
-  }
+  sku                 = "Standard"
+  admin_enabled       = false
 }
