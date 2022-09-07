@@ -20,7 +20,7 @@ terraform {
     subscription_id = "963666b0-eab5-411a-8b3a-b5dc5d4be6e5"
     tenant_id       = "d1b36e95-0d50-42e9-958f-b63fa906beaa"
     client_id       = "ad61c79f-200d-4821-8327-a2b811d5d041"
-    client_secret   = "X~D8Q~mmcz-hYA3iWzKq-qybs.RdZnDV40mebdhx"
+    client_secret   = "XVi8Q~XDx8UpxKC.TcTM~IJaytVBIs2pnDKOmckV"
   }
 }
 
@@ -31,7 +31,7 @@ provider "azurerm" {
   subscription_id = "963666b0-eab5-411a-8b3a-b5dc5d4be6e5"
   tenant_id       = "d1b36e95-0d50-42e9-958f-b63fa906beaa"
   client_id       = "ad61c79f-200d-4821-8327-a2b811d5d041"
-  client_secret   = "X~D8Q~mmcz-hYA3iWzKq-qybs.RdZnDV40mebdhx"
+  client_secret   = "XVi8Q~XDx8UpxKC.TcTM~IJaytVBIs2pnDKOmckV"
   # subscription_id = "233fe509-b301-45fa-afe1-0a36da827a22"
   # tenant_id       = "838496ea-98af-4183-b5ae-f395ecc5080a"
   # client_id       = "c406a1ad-6c4a-4f3c-9f2f-e3cf2992365f"
@@ -58,3 +58,36 @@ resource "azurerm_container_registry" "acr" {
   sku                 = "Standard"
   admin_enabled       = false
 }
+
+
+# resource "azurerm_container_group" "example" {
+#   name                = "cripsy-frontend-instance"
+#   location            = "eastus"
+#   resource_group_name = azurerm_resource_group.example.name
+#   ip_address_type     = "Public"
+#   dns_name_label      = "aci-label"
+#   os_type             = "Linux"
+
+#   container {
+#     name   = "hello-world"
+#     image  = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
+#     cpu    = "0.5"
+#     memory = "1.5"
+
+#     ports {
+#       port     = 443
+#       protocol = "TCP"
+#     }
+#   }
+
+#   container {
+#     name   = "sidecar"
+#     image  = "mcr.microsoft.com/azuredocs/aci-tutorial-sidecar"
+#     cpu    = "0.5"
+#     memory = "1.5"
+#   }
+
+#   tags = {
+#     environment = "testing"
+#   }
+# }
