@@ -38,12 +38,6 @@ provider "azurerm" {
   # client_secret   = "HTC8Q~.gF5UPV0nRcP2k-flb-AfcZsL9YjEqBb1C"
 }
 
-# Generate a random integer to create a globally unique name
-resource "random_integer" "ri" {
-  min = 10000
-  max = 99999
-}
-
 # Create the resource group
 # resource "azurerm_resource_group" "rg" {
 #   name     = "resource-msa"
@@ -65,7 +59,6 @@ resource "azurerm_container_group" "containers" {
   location            = "eastus"
   resource_group_name = "resource-msa"
   ip_address_type     = "Public"
-  dns_name_label      = "aci-label"
   os_type             = "Linux"
 
   container {
