@@ -34,4 +34,4 @@ jobs:
         #     registry-username: ${{ secrets.REGISTRY_USERNAME }}
         #     registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         #     name: crispy-frontend-instance
-        #     location: 'west us'
+        #     location: 'east us'
