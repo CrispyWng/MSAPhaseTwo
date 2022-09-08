@@ -1,4 +1,5 @@
 FROM node:16.4.2-alpine
+EXPOSE 3000
 RUN mkdir -p /usr/src/app
 COPY ./frontend-app/* /usr/src/app/
 COPY ./frontend-app/src /usr/src/app/src
