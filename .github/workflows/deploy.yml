@@ -44,5 +44,4 @@ jobs:
         - uses: azure/appservice-settings@v1
           with:
             app-name: 'webapp-msa-crispy-frontend-wings'
-            app-settings-json: '${{ secrets.APPSETTINGS_FRONTEND }}' 
-            id: settings
+            app-settings-json: '${{ secrets.APPSETTINGS_FRONTEND }}'
