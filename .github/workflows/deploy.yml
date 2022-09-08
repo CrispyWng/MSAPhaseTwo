@@ -24,14 +24,19 @@ jobs:
             docker build ./frontend -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
 
-        - name: 'Deploy to Azure Container Instances'
-          uses: 'azure/aci-deploy@v1'
+        # - name: 'Deploy to Azure Container Instances'
+        #   uses: 'azure/aci-deploy@v1'
+        #   with:
+        #     resource-group: ${{ secrets.RESOURCE_GROUP }}
+        #     dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
+        #     image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
+        #     registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        #     registry-username: ${{ secrets.REGISTRY_USERNAME }}
+        #     registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+        #     name: crispy-frontend-instance
+        #     location: 'east us'
+
+        - uses: azure/webapps-deploy@v2
           with:
-            resource-group: ${{ secrets.RESOURCE_GROUP }}
-            dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
-            registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-            registry-username: ${{ secrets.REGISTRY_USERNAME }}
-            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-            name: crispy-frontend-instance
-            location: 'east us'
+            app-name: 'webapp-msa-crispy-frontend-wings'
+            images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
