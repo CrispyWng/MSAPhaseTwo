@@ -53,27 +53,48 @@ resource "azurerm_container_registry" "acr" {
   admin_enabled       = false
 }
 
-
-resource "azurerm_container_group" "containers" {
-  name                = "cripsy-frontend-instance"
+# Create the Linux App Service Plan
+resource "azurerm_service_plan" "appserviceplan" {
+  name                = "webapp-asp-crispy-msa"
   location            = "eastus"
   resource_group_name = "resource-msa"
-  ip_address_type     = "Public"
   os_type             = "Linux"
+  sku_name            = "F1"
+}
 
-  container {
-    name   = "hello-world"
-    image  = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
-    cpu    = "0.5"
-    memory = "1.5"
-
-    ports {
-      port     = 443
-      protocol = "TCP"
-    }
-  }
-
-  tags = {
-    environment = "testing"
+# Create the web app, pass in the App Service Plan ID
+resource "azurerm_linux_web_app" "webapp" {
+  name                = "webapp-msa-crispy-frontend"
+  location            = "eastus"
+  resource_group_name = "resource-msa"
+  service_plan_id     = azurerm_service_plan.appserviceplan.id
+  https_only          = true
+  site_config {
+    minimum_tls_version = "1.2"
   }
 }
+
+# resource "azurerm_container_group" "containers" {
+#   name                = "cripsy-frontend-instance"
+#   location            = "eastus"
+#   resource_group_name = "resource-msa"
+#   ip_address_type     = "Public"
+#   os_type             = "Linux"
+
+#   container {
+#     name   = "hello-world"
+#     image  = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
+#     cpu    = "0.5"
+#     memory = "1.5"
+
+#     ports {
+#       port     = 443
+#       protocol = "TCP"
+#     }
+#   }
+
+#   tags = {
+#     environment = "testing"
+#   }
+# }
+
