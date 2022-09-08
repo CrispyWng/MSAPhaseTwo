@@ -71,6 +71,7 @@ resource "azurerm_linux_web_app" "webapp" {
   https_only          = true
   site_config {
     minimum_tls_version = "1.2"
+    always_on=false
   }
 }
 
