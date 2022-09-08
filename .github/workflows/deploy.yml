@@ -38,5 +38,5 @@ jobs:
 
         - uses: azure/webapps-deploy@v2
           with:
-            app-name: 'webapp-msa-crispy-frontend-wings'
+            app-name: 'webapp-msa-crispy-frontendwings'
             images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
