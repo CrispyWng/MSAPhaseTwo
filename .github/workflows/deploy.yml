@@ -18,8 +18,8 @@ jobs:
           uses: azure/docker-login@v1
           with:
             login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-            username: ${{ secrets.REGISTRY_USERNAME }}
-            password: ${{ secrets.REGISTRY_PASSWORD }}
+            username: ${{ secrets.SP_CLIENT_ID }}
+            password: ${{ secrets.SP_SECRET }}
         - run: |
             docker build ./frontend -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
@@ -39,4 +39,4 @@ jobs:
         - uses: azure/webapps-deploy@v2
           with:
             app-name: 'webapp-msa-crispy-frontend-wings'
-            images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontdend:${{ github.sha }}
+            images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
