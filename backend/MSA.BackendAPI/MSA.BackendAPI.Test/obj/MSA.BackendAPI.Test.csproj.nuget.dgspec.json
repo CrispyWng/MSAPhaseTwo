@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj": {}
+    "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj": {
+    "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj",
+        "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj",
         "projectName": "MSA.BackendAPI.Test",
-        "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj",
+        "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\MSA.BackendAPI.Test.csproj",
         "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\obj\\",
+        "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Frank\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
-                "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj"
+              "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
+                "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
+    "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+        "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
         "projectName": "MSA.BackendAPI",
-        "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+        "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
         "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
+        "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Frank\\AppData\\Roaming\\NuGet\\NuGet.Config",

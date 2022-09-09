@@ -5484,11 +5484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+      "projectUniqueName": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
       "projectName": "MSA.BackendAPI",
-      "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
+      "projectPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\MSA.BackendAPI.csproj",
       "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
+      "outputPath": "C:\\Repos\\MSAPhaseTwo\\backend\\backend-app\\MSA.BackendAPI\\MSA.BackendAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Frank\\AppData\\Roaming\\NuGet\\NuGet.Config",
