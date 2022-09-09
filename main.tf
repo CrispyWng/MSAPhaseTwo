@@ -50,7 +50,7 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = "resource-msa"
   location            = "eastus"
   sku                 = "Standard"
-  admin_enabled       = false
+  admin_enabled       = true
 }
 
 # Create the Linux App Service Plan
