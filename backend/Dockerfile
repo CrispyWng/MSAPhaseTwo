@@ -8,7 +8,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /app --use-current-runtime --self-contained false --no-restore
 
 # final stage/image
-# FROM mcr.microsoft.com/dotnet/aspnet:6.0
-# WORKDIR /app
-# COPY --from=build /app .
-# ENTRYPOINT ["dotnet", "MSA.BackendAPI.dll"]
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /app
+COPY --from=build-env /app .
+ENTRYPOINT ["dotnet", "MSA.BackendAPI-assembly.dll"]

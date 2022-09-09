@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RuntimeIdentifiers>win7-x64;win7-x86;linux-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x64;win-x86;linux-x64</RuntimeIdentifiers>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>$(MSBuildProjectName)-assembly</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
