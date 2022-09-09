@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows: ["Terraform"]
-    types: [requested]
+    types: [completed]
     branches:
       - 'main'
 jobs:
