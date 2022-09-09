@@ -75,6 +75,19 @@ resource "azurerm_linux_web_app" "webapp" {
   }
 }
 
+# Create the web app, pass in the App Service Plan ID
+resource "azurerm_linux_web_app" "webapp" {
+  name                = "webapp-msa-crispy-backend-wings"
+  location            = "eastus"
+  resource_group_name = "resource-msa"
+  service_plan_id     = azurerm_service_plan.appserviceplan.id
+  https_only          = true
+  site_config {
+    minimum_tls_version = "1.2"
+    always_on=false
+  }
+}
+
 # resource "azurerm_container_group" "containers" {
 #   name                = "cripsy-frontend-instance"
 #   location            = "eastus"

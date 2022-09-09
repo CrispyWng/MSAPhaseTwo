@@ -23,6 +23,16 @@ jobs:
         - run: |
             docker build ./frontend -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/frontend:${{ github.sha }}
+        
+        - name: 'Build and push backend image'
+          uses: azure/docker-login@v1
+          with:
+            login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+            username: ${{ secrets.SP_CLIENT_ID }}
+            password: ${{ secrets.SP_SECRET }}
+        - run: |
+            docker build ./backend -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/backend:${{ github.sha }}
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/backend:${{ github.sha }}
 
         # - name: 'Deploy to Azure Container Instances'
         #   uses: 'azure/aci-deploy@v1'
@@ -36,6 +46,7 @@ jobs:
         #     name: crispy-frontend-instance
         #     location: 'east us'
 
+        # Deploy frontend
         - uses: azure/webapps-deploy@v2
           with:
             app-name: 'webapp-msa-crispy-frontend-wings'
@@ -45,3 +56,14 @@ jobs:
           with:
             app-name: 'webapp-msa-crispy-frontend-wings'
             app-settings-json: '${{ secrets.APPSETTINGS_FRONTEND }}'
+
+        # Deploy backend
+        - uses: azure/webapps-deploy@v2
+          with:
+            app-name: 'webapp-msa-crispy-backend-wings'
+            images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/backend:${{ github.sha }}
+
+        - uses: azure/appservice-settings@v1
+          with:
+            app-name: 'webapp-msa-crispy-backend-wings'
+            app-settings-json: '${{ secrets.APPSETTINGS_BACKEND }}'
