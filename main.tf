@@ -76,7 +76,7 @@ resource "azurerm_linux_web_app" "webapp" {
 }
 
 # Create the web app, pass in the App Service Plan ID
-resource "azurerm_linux_web_app" "webapp" {
+resource "azurerm_linux_web_app" "webapp-backend" {
   name                = "webapp-msa-crispy-backend-wings"
   location            = "eastus"
   resource_group_name = "resource-msa"
