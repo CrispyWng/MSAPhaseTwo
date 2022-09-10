@@ -14,21 +14,12 @@ terraform {
     storage_account_name = "terraformstate235"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
-    # subscription_id      = var.subscriptionId
-    # tenant_id            = var.tenantId
-    # client_id            = var.clientId
-    # client_secret        = var.client_secret
   }
 }
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-
-  # subscription_id = var.subscriptionId
-  # tenant_id       = var.tenantId
-  # client_id       = var.clientId
-  # client_secret   = var.client_secret
 }
 
 # Create the Linux App Service Plan
