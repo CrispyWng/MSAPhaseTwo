@@ -14,10 +14,10 @@ terraform {
     storage_account_name = "terraformstate235"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
-    subscription_id = var.subscriptionId
-    tenant_id       = var.tenantId
-    client_id       = var.clientId
-    client_secret   = var.client_secret
+    # subscription_id      = var.subscriptionId
+    # tenant_id            = var.tenantId
+    # client_id            = var.clientId
+    # client_secret        = var.client_secret
   }
 }
 
@@ -25,10 +25,10 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = var.subscriptionId
-  tenant_id       = var.tenantId
-  client_id       = var.clientId
-  client_secret   = var.client_secret
+  # subscription_id = var.subscriptionId
+  # tenant_id       = var.tenantId
+  # client_id       = var.clientId
+  # client_secret   = var.client_secret
 }
 
 # Create the Linux App Service Plan
@@ -58,7 +58,7 @@ resource "azurerm_linux_web_app" "webapp" {
   https_only          = true
   site_config {
     minimum_tls_version = "1.2"
-    always_on=false
+    always_on           = false
   }
 }
 
@@ -71,6 +71,6 @@ resource "azurerm_linux_web_app" "webapp-backend" {
   https_only          = true
   site_config {
     minimum_tls_version = "1.2"
-    always_on=false
+    always_on           = false
   }
 }
