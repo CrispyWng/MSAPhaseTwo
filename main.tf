@@ -14,10 +14,10 @@ terraform {
     storage_account_name = "terraformstate235"
     container_name       = "terraform"
     key                  = "terraform.tfstate"
-    subscription_id = TF_VAR_subscriptionId
-    tenant_id       = TF_VAR_tenantId
-    client_id       = TF_VAR_clientId
-    client_secret   = TF_VAR_client_secret
+    subscription_id = var.subscriptionId
+    tenant_id       = var.tenantId
+    client_id       = var.clientId
+    client_secret   = var.client_secret
   }
 }
 
@@ -25,10 +25,10 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = TF_VAR_subscriptionId
-  tenant_id       = TF_VAR_tenantId
-  client_id       = TF_VAR_clientId
-  client_secret   = TF_VAR_client_secret
+  subscription_id = var.subscriptionId
+  tenant_id       = var.tenantId
+  client_id       = var.clientId
+  client_secret   = var.client_secret
 }
 
 # Create the Linux App Service Plan
